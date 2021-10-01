@@ -1,7 +1,7 @@
 # Oppgave 1 & 2
 
 kompiler og start de forskeillige programmene ved og kjøre tilhørende .sh fil.
-Gjør .sh filene executable med: "chmod +x <filename>"
+Gjør .sh filene executable med: "<code>chmod +x 'filename'</code>"
 
 ### output fra assembly fila havner i out.text
 
