@@ -1,5 +1,8 @@
 section .data                 ; This section is for declaring initialized data
-  msg: db "Hello World from Trondheim!", 10
+
+msg:
+    .buffer: db "Hello World from Trondheim!", 10
+    .length: dq $ - msg
 
 section .text                 ; This is where the actual assembly code is written
 
@@ -16,7 +19,7 @@ top:
   mov rax, 1                  ; The system call for write
   mov rdi, 2                  ; File descriptor 1 - standard output
   mov rsi, msg                ; Memory address of message
-  mov rdx, 28                 ; The length of message
+  mov rdx, [msg.length]       ; The length of message
   syscall                     ; Call the kernel
 
   pop rcx                     ; Restore counter from the stack

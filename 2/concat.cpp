@@ -36,6 +36,6 @@ int main(int argc, char const *argv[])
     string input;
     cin >> input;
     cout << "Result:\n"
-         << update_string(input);
+         << update_string(input) + "\n";
     return 0;
 }
